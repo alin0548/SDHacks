@@ -1,14 +1,87 @@
 <!DOCTYPE html>
+
 <html>
 	<head>
-		<link rel="stylesheet" type="text/css" href="/index.css">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"></script>
+		<title>Grade</title>
+		<link rel="stylesheet" href="css/basic.css" />
 	</head>
+
 	<body>
-		<div id="canvas">
-			<!-- <div id="origin"></div> -->
+		<div id="courses"></div>
+
+		<div class="requirements">
+			<h2> University Requirements</h2>
+			<div class="switchLabel">Reading and Composition A</div>
+			<label class="switch" id="R1A">
+				<input type="checkbox">
+				<span class="slider"></span>
+			</label>
+			<div class="switchLabel">Reading and Composition B</div>
+			<label class="switch" id="R1B">
+				<input type="checkbox">
+				<span class="slider"></span>
+			</label>
+			<div class="switchLabel">American Culture</div>
+			<label class="switch" id="AC">
+				<input type="checkbox">
+				<span class="slider"></span>
+			</label>
+			<div class="switchLabel">American History</div>
+			<label class="switch" id="AH">
+				<input type="checkbox">
+				<span class="slider"></span>
+			</label>
+			<div class="switchLabel">American Institutions</div>
+			<label class="switch" id="AI">
+				<input type="checkbox">
+				<span class="slider"></span>
+			</label>
+			<div class="switchLabel">College Writing</div>
+			<label class="switch" id="CW">
+				<input type="checkbox">
+				<span class="slider"></span>
+			</label>
+
+			<h2>L&S Breadth Requirements</h2>
+			<div class="switchLabel">Arts and Literature</div>
+			<label class="switch" id="AL">
+				<input type="checkbox">
+				<span class="slider"></span>
+			</label>
+			<div class="switchLabel">International Studies</div>
+			<label class="switch" id="IS">
+				<input type="checkbox">
+				<span class="slider"></span>
+			</label>
+			<div class="switchLabel">Historical Studies</div>
+			<label class="switch" id="HS">
+				<input type="checkbox">
+				<span class="slider"></span>
+			</label>
+			<div class="switchLabel">Biological Sciences</div>
+			<label class="switch" id="BS">
+				<input type="checkbox">
+				<span class="slider"></span>
+			</label>
+			<div class="switchLabel">Physical Science</div>
+			<label class="switch" id="PS">
+				<input type="checkbox">
+				<span class="slider"></span>
+			</label>
+			<div class="switchLabel">Philosophy and Values</div>
+			<label class="switch" id="PV">
+				<input type="checkbox">
+				<span class="slider"></span>
+			</label>
+			<div class="switchLabel">Social and Behavioral Sciences</div>
+			<label class="switch" id="SBS">
+				<input type="checkbox">
+				<span class="slider"></span>
+			</label>
 		</div>
-		<script src = "/index.js"></script>
+
 	</body>
-<html>
+
+	<script src="js/button.js"></script>
+
+</html>
