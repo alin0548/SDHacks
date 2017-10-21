@@ -1,3 +1,14 @@
+open = false;
+function overlay() {
+	if (open) {
+    	document.getElementById("require").style.width = 0;
+    	open = false;
+    } else {
+    	document.getElementById("require").style.width = "300px";
+    	open = true;
+    }
+}
+
 // requirements
 var ac = readTextFile("../static/requirement2classes/ac.txt");
 var ah = readTextFile("../static/requirement2classes/ah.txt");
@@ -115,10 +126,10 @@ function loadClasses() {
 				i = loadDepartment(dept2acro[dept], acro2classU, i);
 				break;
 			case 'V':
-				i = loadDepartment(dept2acro[dept], acro2classV), i;
+				i = loadDepartment(dept2acro[dept], acro2classV, i);
 				break;
 			case 'Y':
-				i = loadDepartment(dept2acro[dept], acro2classY), i;
+				i = loadDepartment(dept2acro[dept], acro2classY, i);
 				break;
 			default:
 				console.log('welp ur missing a letter');
@@ -129,17 +140,18 @@ function loadClasses() {
 function loadDepartment(acro, acro2class, i) {
 	// set background color to be something different for each department
 	for (var clas in acro2class[acronym]) {
-		document.getElementById('courses').innerHTML = "<div class='" + acronym + "' id='" + i + "'><h1>" + clas + "</h1></div>";
+		document.getElementById('courses').innerHTML = "<div class='" + acronym + " course' id='" + i + "'><h1>" + clas + "</h1></div>";
 		i++;
 	}
 	return i;
 }
 
 // animates tile once requirement is toggles
-function animateTiles(requirement){
+function animate(requirement){
 	requirement = requirement.toUpperCase();
 	for (var clas in ac[requirement]) {
 		// animate each element
 		document.getElementsByClass(requirement).animate() // <<<--------------LOL FIX
 	}
 }
+

@@ -13,15 +13,23 @@ h1 {
 	display: none;
 }
 
-h2 {
-	color: white;
-}
 
 .requirements {
-	bottom: 0;
-	position: absolute;
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  right: 0;
+  top: 0;
+  background-color: rgba(0,0,0, 0.5);
+  overflow: hidden;
+  transition: 0.5s;
 }
 
+.requirements h2 {
+  color: white;
+  width: 300px;
+}
 
 .switch {
   position: relative;
@@ -34,6 +42,7 @@ h2 {
 .switch input {display:none;}
 
 .switchLabel {
+  width: 300px;
 	color: white;
 }
 

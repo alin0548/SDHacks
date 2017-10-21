@@ -7,78 +7,79 @@
 	</head>
 
 	<body>
-		<button onclick="loadClasses()">load classes</button>
+		<button onclick="overlay()">change requirements</button>
+		<button onclick="loadClasses()">start load classes</button>
 
 		<div id="courses"></div>
 
-		<div class="requirements">
+		<div class="requirements" id="require">
 			<h2> University Requirements</h2>
 			<div class="switchLabel">Reading and Composition A</div>
 			<label class="switch" id="R1A">
 				<input type="checkbox">
-				<span class="slider"></span>
+				<span onclick="animate(R1A)" class="slider"></span>
 			</label>
 			<div class="switchLabel">Reading and Composition B</div>
 			<label class="switch" id="R1B">
 				<input type="checkbox">
-				<span class="slider"></span>
+				<span onclick="animate(R1B)" class="slider"></span>
 			</label>
 			<div class="switchLabel">American Culture</div>
 			<label class="switch" id="AC">
 				<input type="checkbox">
-				<span class="slider"></span>
+				<span onclick="animate(AC)" class="slider"></span>
 			</label>
 			<div class="switchLabel">American History</div>
 			<label class="switch" id="AH">
 				<input type="checkbox">
-				<span class="slider"></span>
+				<span onclick="animate(AH)" class="slider"></span>
 			</label>
 			<div class="switchLabel">American Institutions</div>
 			<label class="switch" id="AI">
 				<input type="checkbox">
-				<span class="slider"></span>
+				<span onclick="animate(AI)" class="slider"></span>
 			</label>
-			<div class="switchLabel">College Writing</div>
-			<label class="switch" id="CW">
+			<div class="switchLabel">Entry Level Writing</div>
+			<label class="switch" id="ELW">
 				<input type="checkbox">
-				<span class="slider"></span>
+				<span onclick="animate(ELW)" class="slider"></span>
 			</label>
 
 			<h2>L&S Breadth Requirements</h2>
 			<div class="switchLabel">Arts and Literature</div>
 			<label class="switch" id="AL">
 				<input type="checkbox">
-				<span class="slider"></span>
+				<span onclick="animate(AL)" class="slider"></span>
 			</label>
 			<div class="switchLabel">International Studies</div>
 			<label class="switch" id="IS">
 				<input type="checkbox">
-				<span class="slider"></span>
+				<span onclick="animate(IS)" class="slider"></span>
 			</label>
 			<div class="switchLabel">Historical Studies</div>
 			<label class="switch" id="HS">
 				<input type="checkbox">
-				<span class="slider"></span>
+				<span onclick="animate(HS)" class="slider"></span>
 			</label>
 			<div class="switchLabel">Biological Sciences</div>
 			<label class="switch" id="BS">
 				<input type="checkbox">
-				<span class="slider"></span>
+				<span onclick="animate(BS)" class="slider"></span>
 			</label>
 			<div class="switchLabel">Physical Science</div>
 			<label class="switch" id="PS">
 				<input type="checkbox">
-				<span class="slider"></span>
+				<span onclick="animate(PS)" class="slider"></span>
 			</label>
 			<div class="switchLabel">Philosophy and Values</div>
 			<label class="switch" id="PV">
 				<input type="checkbox">
-				<span class="slider"></span>
+				<span onclick="animate(PV)" class="slider"></span>
 			</label>
 			<div class="switchLabel">Social and Behavioral Sciences</div>
 			<label class="switch" id="SBS">
 				<input type="checkbox">
-				<span class="slider"></span>
+				<span onclick="animate(SBS)" class="slider"></span>
 			</label>
 		</div>
 
