@@ -1,18 +1,18 @@
 // requirements
 var requirement2classes = {};
-requirement2classes['AC'] = readTextFile("../static/requirement2classes/ac.txt");
-requirement2classes['AH'] = readTextFile("../static/requirement2classes/ah.txt");
-requirement2classes['AI'] = readTextFile("../static/requirement2classes/ai.txt");
-requirement2classes['AL'] = readTextFile("../static/requirement2classes/al.txt");
-requirement2classes['BS'] = readTextFile("../static/requirement2classes/bs.txt");
-requirement2classes['ELW'] = readTextFile("../static/requirement2classes/elw.txt");
-requirement2classes['HS'] = readTextFile("../static/requirement2classes/hs.txt");
-requirement2classes['IS'] = readTextFile("../static/requirement2classes/is.txt");
-requirement2classes['PS'] = readTextFile("../static/requirement2classes/ps.txt");
-requirement2classes['PV'] = readTextFile("../static/requirement2classes/pv.txt");
-requirement2classes['R1A'] = readTextFile("../static/requirement2classes/r1a.txt");
-requirement2classes['R1B'] = readTextFile("../static/requirement2classes/r1b.txt");
-requirement2classes['SBS'] = readTextFile("../static/requirement2classes/sbs.txt");
+requirement2classes['AC'] = JSON.parse(readTextFile("../static/requirement2classes/ac.txt"));
+requirement2classes['AH'] = JSON.parse(readTextFile("../static/requirement2classes/ah.txt"));
+requirement2classes['AI'] = JSON.parse(readTextFile("../static/requirement2classes/ai.txt"));
+requirement2classes['AL'] = JSON.parse(readTextFile("../static/requirement2classes/al.txt"));
+requirement2classes['BS'] = JSON.parse(readTextFile("../static/requirement2classes/bs.txt"));
+requirement2classes['ELW'] = JSON.parse(readTextFile("../static/requirement2classes/elw.txt"));
+requirement2classes['HS'] = JSON.parse(readTextFile("../static/requirement2classes/hs.txt"));
+requirement2classes['IS'] = JSON.parse(readTextFile("../static/requirement2classes/is.txt"));
+requirement2classes['PS'] = JSON.parse(readTextFile("../static/requirement2classes/ps.txt"));
+requirement2classes['PV'] = JSON.parse(readTextFile("../static/requirement2classes/pv.txt"));
+requirement2classes['R1A'] = JSON.parse(readTextFile("../static/requirement2classes/r1a.txt"));
+requirement2classes['R1B'] = JSON.parse(readTextFile("../static/requirement2classes/r1b.txt"));
+requirement2classes['SBS'] = JSON.parse(readTextFile("../static/requirement2classes/sbs.txt"));
 
 
 var dept2acro = readTextFile("../static/full_to_acr.txt");
@@ -67,11 +67,30 @@ function loadClasses() {
 
 
 // animates tile once requirement is toggles
-function animate(req){
+function anim(req){
+	var x;
+	if (!document.getElementById(req).on) {
+		document.getElementById(req).on=true;
+		x=1;
+	} else {
+		document.getElementById(req).on=false;
+		x=-1;
+	}
+
 	req = req.toUpperCase();
-	for (var clas in requirement2classes[req]) {
+	//console.log(requirement2classes[req][req]);
+	for (var clas of requirement2classes[req][req]) {
 		// animate each element
-		document.getElementsByClass(requirement).animate() // <<<--------------LOL FIX
+		//console.log(clas);
+		if(!document.getElementById(clas).count) {
+			document.getElementById(clas).count=0;
+		}
+		document.getElementById(clas).count+=x;
+		if(document.getElementById(clas).count>0) {
+			$(document.getElementById(clas)).animate({opacity:1}); // <<<--------------LOL FIX
+		} else {
+			$(document.getElementById(clas)).animate({opacity:0});
+		}
 	}
 }
 
