@@ -94,6 +94,10 @@ function anim(req){
 	}
 }
 
+function popup(id) {
+	document.getElementById(id).style.classList.toggle("show");
+}
+
 open = false;
 function overlay() {
 	if (open) {
