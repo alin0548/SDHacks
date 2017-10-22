@@ -2,12 +2,23 @@ body {
 	background: black no-repeat center center fixed;
 }
 
-.course {
+.tiles {
+  margin: 6px;
+}
+
+.square {
 	width: 9.5px;
 	height: 9.5px;
 	background-color: white;
 	margin: 1px;
   float: left;
+}
+
+.circle {
+  border-radius: 50%;
+  width: 9.5px;
+  height: 9.5px;
+  background-color: black;
 }
 
 h1 {
