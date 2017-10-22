@@ -95,7 +95,7 @@ function anim(req){
 }
 
 function popup(id) {
-	document.getElementById("h" + id).style.display = "inline";
+	document.getElementById("h" + id).style.display = "block";
 }
 
 open = false;

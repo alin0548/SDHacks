@@ -29,7 +29,7 @@ body {
 }
 
 /* The actual popup */
-.circle h1 {
+.circle .h1 {
   size: 15px;
   /*visibility: hidden;*/
   display: none;
@@ -40,14 +40,14 @@ body {
   border-radius: 6px;
   padding: 8px 0;
   position: relative;
-  z-index: 1;
+  z-index: 50;
   bottom: 125%;
   left: 50%;
   margin-left: -80px;
 }
 
 /* Popup arrow */
-.circle h1::after {
+.circle .h1::after {
   content: "";
   position: absolute;
   top: 100%;
