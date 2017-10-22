@@ -52,7 +52,7 @@ var acro2classY = readTextFile("../static/acronym2classes/Z.txt");
 function readTextFile(file) {
 	var rawFile1 = new XMLHttpRequest();
 	rawFile1.open("GET", file, false);
-	rawFile.onreadystatechange = function() {
+	rawFile1.onreadystatechange = function() {
 		if(rawFile1.readyState === 4) {
 			if(rawFile1.status === 200 || rawFile1.status == 0) {
 				return rawFile1.responseText;
@@ -62,7 +62,7 @@ function readTextFile(file) {
 }
 
 function loadClasses() {
-	int i = 0;
+	var i = 0;
 	for (var dept in dept2acro) {
 		switch (dept[0]){
 			case 'A':
