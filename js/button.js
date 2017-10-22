@@ -104,7 +104,7 @@ function overlay() {
     	document.getElementById("require").style.width = 0;
     	open = false;
     } else {
-    	document.getElementById("require").style.width = "300px";
+    	document.getElementById("require").style.width = "350px";
     	open = true;
     }
 }

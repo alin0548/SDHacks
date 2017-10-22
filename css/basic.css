@@ -30,8 +30,9 @@ body {
 
 /* The actual popup */
 .circle h1 {
-  /*display: none;*/
-  visibility: hidden;
+  size: 15px;
+  /*visibility: hidden;*/
+  display: none;
   width: 160px;
   background-color: #555;
   color: #fff;
@@ -80,7 +81,8 @@ body {
 
 
 .requirements {
-  height: 100%;
+  text-align: center;
+  height: 100vh;
   width: 0;
   position: fixed;
   z-index: 1;
@@ -88,12 +90,12 @@ body {
   top: 0;
   background-color: rgba(0,0,0, 0.5);
   overflow: hidden;
-  transition: 0.5s;
+  transition: 0.75s;
 }
 
 .requirements h2 {
   color: white;
-  width: 300px;
+  width: 350px;
 }
 
 .switch {
@@ -104,10 +106,12 @@ body {
 }
 
 /* Hide default HTML checkbox */
-.switch input {display:none;}
+.switch input {
+  display:none;
+}
 
 .switchLabel {
-  width: 300px;
+  width: 350px;
 	color: white;
 }
 
